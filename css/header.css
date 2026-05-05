@@ -1,4 +1,6 @@
 header {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -16,9 +18,64 @@ header {
 }
 
 .navigation-menu {
-    margin-top: 24px;
+  margin-top: 24px;
+}
+
+/* Seletor de irmandade: ~ */
+input[type="checkbox"]:checked ~ nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: block;
+
+  background-color: var(--background-tertiary-color);
+  width: 100%;
 }
 
 nav {
+  display: none;
+}
+
+.list-links {
+  list-style: none;
+}
+
+.list-links li {
+  margin: 16px 0px;
+}
+
+.list-links li a {
+  font-size: 24px;
+  font-weight: var(--menu-text-weight);
+
+  color: var(--text-secondary-color);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation-menu {
+    width: 467px;
+
+    margin-top: 0;
+  }
+
+  .navigation-menu label {
     display: none;
+  }
+
+  .navigation-menu nav {
+    display: block;
+  }
+
+  .navigation-menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .list-links li {
+    margin: 0;
+  }
 }
