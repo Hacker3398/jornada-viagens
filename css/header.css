@@ -1,4 +1,6 @@
 header {
+  position: relative;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,9 +23,29 @@ header {
 
 /* Seletor de irmandade: ~ */
 input[type="checkbox"]:checked ~ nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
   display: block;
+
+  background-color: var(--background-tertiary-color);
+  width: 100%;
 }
 
 nav {
   display: none;
+}
+
+.list-links {
+  list-style: none;
+}
+
+.list-links li {
+  margin: 16px 0px;
+}
+
+.list-links li a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
 }
