@@ -16,9 +16,14 @@ header {
 }
 
 .navigation-menu {
-    margin-top: 24px;
+  margin-top: 24px;
+}
+
+/* Seletor de irmandade: ~ */
+input[type="checkbox"]:checked ~ nav {
+  display: block;
 }
 
 nav {
-    display: none;
+  display: none;
 }
